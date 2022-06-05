@@ -2,3 +2,4 @@
 - Neal Kranes
 - Matthew Gieger
 - Sebastian Odell
+- Zain Raza
