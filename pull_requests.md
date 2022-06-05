@@ -3,3 +3,4 @@
 - Matthew Gieger
 - Sebastian Odell
 - Zain Raza
+- Jesse Kelly
