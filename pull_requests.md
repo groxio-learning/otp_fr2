@@ -4,4 +4,5 @@
 - Sebastian Odell
 - Zain Raza
 - Jesse Kelly
+- Kate Brender
 - Jim Alexander
