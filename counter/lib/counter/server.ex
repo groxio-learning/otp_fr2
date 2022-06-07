@@ -6,7 +6,7 @@ defmodule Counter.Server do
   # Client
 
   def start_link(value) do
-    GenServer.start_link(__MODULE__, value)
+    GenServer.start_link(__MODULE__, value, name: :dracula)
   end
 
   def inc(pid) do
