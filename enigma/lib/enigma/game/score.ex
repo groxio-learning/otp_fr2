@@ -17,4 +17,9 @@ defmodule Enigma.Game.Score do
 		0..(reds-1) |> Enum.map(fn _x -> "R" end) |> join()
 		0..(whites-1) |> Enum.map(fn _x -> "W" end) |> join()
 	end
+
+	def render(answer, attempt) do
+		# new() |> show()
+		"RRW"
+	end
 end
