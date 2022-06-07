@@ -1,11 +1,11 @@
 defmodule Counter.Service do
   alias Counter.Core
 
-  def loop(count) do
-    count |> listen |> loop
+  defp loop(count) do
+    count |> listen() |> loop()
   end
 
-  def listen(count) do
+  defp listen(count) do
     receive do
       :inc ->
         Core.inc(count)
@@ -19,7 +19,7 @@ defmodule Counter.Service do
   # client side API
   def start(input) do
     spawn fn ->
-      input |> Core.new |> loop
+      input |> Core.new() |> loop()
     end
   end
 
