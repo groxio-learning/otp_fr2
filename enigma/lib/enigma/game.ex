@@ -45,13 +45,13 @@ defmodule Enigma.Game do
     end
   end
 
+  def over?(game), do: won?(game) || lost?(game)
+
   defp won?(%__MODULE__{answer: answer, attempts: [answer | _rest]}), do: true
   defp won?(_game), do: false
 
   defp lost?(%__MODULE__{attempts: attempts}) when length(attempts) >= @max_attempts, do: true
   defp lost?(_game), do: false
-
-  def active?(game), do: won?(game) || lost?(game)
 end
 
 # use this to test playing:
