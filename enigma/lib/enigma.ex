@@ -1,18 +1,9 @@
 defmodule Enigma do
-  @moduledoc """
-  Documentation for `Enigma`.
-  """
+  def start(game_name) do
+    DynamicSupervisor.start_child(:dysup, {Enigma.Server, game_name})
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Enigma.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def guess(game_name, attempt) do
+    Enigma.Server.attempt(game_name, attempt)
   end
 end
